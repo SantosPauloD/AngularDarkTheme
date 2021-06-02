@@ -1,0 +1,25 @@
+<mat-toolbar color="primary">
+  <div class="d-flex container-fluid">
+    <div class="col-6 logo">
+      {{ appMode.mode ? 'Dark' : 'Light' }} theme
+    </div>
+    <div class="col-6 d-flex align-items-center justify-content-end">
+      <mat-slide-toggle
+        [checked]="appMode.mode"
+        (change)="toggle($event)">
+        <mat-icon>brightness_3</mat-icon>
+      </mat-slide-toggle>
+    </div>
+  </div>
+</mat-toolbar>
+
+<div class="container mt-3">
+    <router-outlet></router-outlet>
+    <mat-card class="col-12">
+      <h2>Lorem</h2>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis
+        illum provident, necessitatibus commodi nobis culpa voluptatem odit
+        officiis facere beatae accusamus. Praesentium, voluptas! Praesentium
+        iste dolorum magni dolor sit? Nihil.</p>
+    </mat-card>
+</div>
